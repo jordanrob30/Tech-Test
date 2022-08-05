@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CurrencyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::prefix('currency')->group(function() {
+    Route::get('australian-dollars', [CurrencyController::class, 'getAustralianDollars']);
+});
 
 Route::get('/', function () {
     return view('welcome');

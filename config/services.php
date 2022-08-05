@@ -31,4 +31,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'float_rates' => [
+        'base_url' => env('FLOAT_RATES_BASE_URL')
+    ]
+
 ];
